@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  width: calc(50vw + 6px);
+  min-height: 50vh;
+  background-color: #fff;
+  transition: width 0.3s;
+  position: relative;
+
+  &.expand {
+    width: calc(50vw + 21rem);
+  }
+}
+
+.calendar {
+  width: 50vw;
+  padding: 1rem;
+  border: 3px solid #000;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  button {
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.dayName {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.25rem 0;
+  color: #444;
+}
+
+.dayCell {
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(81, 200, 255);
+  }
+
+  &.hide {
+    pointer-events: none;
+  }
+
+  &.today {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+
+  &.selected {
+    background-color: #09ff00;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.logoutBtn {
+  position: absolute;
+  right: 0;
+  top: -3rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  border: 3px solid red;
+
+  &:hover {
+    color: #fff;
+    background-color: red;
+  }
+}

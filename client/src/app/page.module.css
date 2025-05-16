@@ -1,0 +1,29 @@
+.page {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.month {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 14.2%;
+  height: 3rem;
+}
+
+.today {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
