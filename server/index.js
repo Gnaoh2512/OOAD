@@ -4,8 +4,12 @@ import cookieParser from "cookie-parser";
 import authRouter from "./routes/authRoute.js";
 import dataRouter from "./routes/dataRoute.js";
 import userRouter from "./routes/userRoute.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
+
 app.set("trust proxy", 1);
 
 app.use(
